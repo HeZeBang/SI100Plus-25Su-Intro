@@ -134,7 +134,7 @@ const slides = [
           <MDBlock>{`
 ## 艾恒宇 / AstatineAi
 - 23 CS
-- GeekPie 副主席、OI 大犇、现科研在 NC State ~~（这段我私自加的）~~
+- GeekPie 副主席、前算法竞赛爱好者、现科研在 NC State ~~（这段我私自加的）~~
 - 编程语言理论/函数式编程爱好者
 - ~~Haskell~~ Agda & Lean4 是世界上最好的语言
 - aihy2023@shanghaitech.edu.cn
