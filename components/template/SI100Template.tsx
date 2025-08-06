@@ -71,6 +71,7 @@ const Slides: React.FC<SlidesProps> = ({ data }: SlidesProps) => {
             autoplay={false}
             loop={false}
             hashNavigation={true}
+            virtual
             modules={[Autoplay, Navigation, Pagination, Keyboard, HashNavigation, Virtual]}
           >
             <div className="absolute right-5 bottom-5 z-10 rounded-full bg-[#f0f0f0aa] backdrop:blur-md p-2 flex items-center gap-2 border-outline border backdrop-blur-xl backdrop-saturate-200">
@@ -117,8 +118,16 @@ const Slides: React.FC<SlidesProps> = ({ data }: SlidesProps) => {
             {
               data.map((slide, index) => (
                 <SwiperSlide key={index} data-hash={`slide-${index}`} className={cn("bg-white p-14 overflow-auto")}>
-                  <h2 className="text-4xl font-bold mb-4 sticky">{slide.title}</h2>
-                  {slide.content}
+                  {slide.content ? (
+                    <>
+                      <h2 className="text-4xl font-bold mb-4 sticky">{slide.title}</h2>
+                      {slide.content}
+                    </>
+                  ) : (
+                    <div className="flex w-full h-full items-center justify-center">
+                      <span className="font-black text-5xl">{slide.title}</span>
+                    </div>
+                  )}
                 </SwiperSlide>
               ))
             }

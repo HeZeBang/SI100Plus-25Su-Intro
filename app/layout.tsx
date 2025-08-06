@@ -11,9 +11,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS 13 with Swiper Slider",
+  title: "SI100+",
   description:
-    "Represents a small example of Swiper Slider implemented in NextJS 13",
+    "SI100+ is an introduction to computer science course designed for students with no prior programming experience. It covers the basics of computer science, programming, and problem-solving skills.",
 };
 
 export default function RootLayout({

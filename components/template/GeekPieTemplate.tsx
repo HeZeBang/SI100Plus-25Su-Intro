@@ -15,7 +15,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { SlidesProps } from "@/app/types/Slides";
 
-const Slides: React.FC<SlidesProps> = ({ data } : SlidesProps) => {
+const Slides: React.FC<SlidesProps> = ({ data }: SlidesProps) => {
   const [swiperInstance, setSwiperInstance] = React.useState<SwiperClass | null>(null);
   const nextBtn = React.useRef<HTMLDivElement>(null);
   const prevBtn = React.useRef<HTMLDivElement>(null);
@@ -74,12 +74,12 @@ const Slides: React.FC<SlidesProps> = ({ data } : SlidesProps) => {
           >
             <div className="absolute right-5 bottom-5 z-10 rounded-full bg-[#f0f0f0aa] backdrop:blur-md p-2 flex items-center gap-2 border-outline border backdrop-blur-xl backdrop-saturate-200">
               <div ref={prevBtn} className="cursor-pointer" onClick={() => swiperInstance?.slidePrev()}>
-                <ChevronLeft className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all"/>
+                <ChevronLeft className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all" />
               </div>
               {/* <span>{currentSlide}</span> */}
               <AnimatedCounter value={currentSlide || 0} className="bg-[#f0f0f0aa]" />
               <div ref={nextBtn} className="cursor-pointer" onClick={() => swiperInstance?.slideNext()}>
-                <ChevronRight className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all"/>
+                <ChevronRight className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all" />
               </div>
             </div>
             <SwiperSlide key="cover" data-hash="cover" className="bg-white p-14 overflow-hidden">
@@ -94,8 +94,16 @@ const Slides: React.FC<SlidesProps> = ({ data } : SlidesProps) => {
             {
               data.map((slide, index) => (
                 <SwiperSlide key={index} data-hash={`slide-${index}`} className={cn("bg-white p-14 overflow-auto")}>
-                  <h2 className="text-4xl font-bold mb-4 sticky">{slide.title}</h2>
-                  {slide.content}
+                  {slide.content ? (
+                    <>
+                      <h2 className="text-4xl font-bold mb-4 sticky">{slide.title}</h2>
+                      {slide.content}
+                    </>
+                  ) : (
+                    <div className="flex w-full h-full">
+                      <span className="font-black text-2xl">{slide.title}</span>
+                    </div>
+                  )}
                 </SwiperSlide>
               ))
             }
