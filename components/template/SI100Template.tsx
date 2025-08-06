@@ -14,8 +14,9 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { SlidesProps } from "@/app/types/Slides";
+import CardSwap, { Card } from "../ui/cardswap";
 
-const Slides: React.FC<SlidesProps> = ({ data } : SlidesProps) => {
+const Slides: React.FC<SlidesProps> = ({ data }: SlidesProps) => {
   const [swiperInstance, setSwiperInstance] = React.useState<SwiperClass | null>(null);
   const nextBtn = React.useRef<HTMLDivElement>(null);
   const prevBtn = React.useRef<HTMLDivElement>(null);
@@ -74,20 +75,42 @@ const Slides: React.FC<SlidesProps> = ({ data } : SlidesProps) => {
           >
             <div className="absolute right-5 bottom-5 z-10 rounded-full bg-[#f0f0f0aa] backdrop:blur-md p-2 flex items-center gap-2 border-outline border backdrop-blur-xl backdrop-saturate-200">
               <div ref={prevBtn} className="cursor-pointer" onClick={() => swiperInstance?.slidePrev()}>
-                <ChevronLeft className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all"/>
+                <ChevronLeft className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all" />
               </div>
               {/* <span>{currentSlide}</span> */}
               <AnimatedCounter value={currentSlide || 0} className="bg-[#f0f0f0aa]" />
               <div ref={nextBtn} className="cursor-pointer" onClick={() => swiperInstance?.slideNext()}>
-                <ChevronRight className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all"/>
+                <ChevronRight className="aspect-square w-7 h-7 rounded-full p-1 border hover:bg-white active:scale-95 transition-all" />
               </div>
             </div>
             <SwiperSlide key="cover" data-hash="cover" className="bg-white p-14 overflow-hidden">
+              {/* <CardSwap
+                cardDistance={80}
+                verticalDistance={150}
+                delay={5000}
+                pauseOnHover={false}
+                width={1000}
+                height={600}
+              >
+                <Card className="bg-secondary">
+                  <h3>Card 1</h3>
+                  <p>Your content here</p>
+                </Card>
+                <Card className="bg-secondary">
+                  <h3>Card 2</h3>
+                  <p>Your content here</p>
+                </Card>
+                <Card className="bg-secondary">
+                  <h3>Card 3</h3>
+                  <p>Your content here</p>
+                </Card>
+              </CardSwap> */}
               <div className="items-start justify-center flex w-full h-full gap-5 flex-col">
                 <h1 className="text-7xl font-extrabold z-20">
-                  Fullstack 101
+                  Welcome to SI100+
                 </h1>
-                <span className="text-3xl">A Coffee With Pie</span>
+                <span className="text-3xl">课程简介</span>
+                <span className="text-xl text-secondary-foreground italic">Presented by <b>ZAMBAR</b></span>
               </div>
               <Universe />
             </SwiperSlide>
@@ -99,6 +122,15 @@ const Slides: React.FC<SlidesProps> = ({ data } : SlidesProps) => {
                 </SwiperSlide>
               ))
             }
+            <SwiperSlide key="ending" data-hash="ending" className="bg-white p-14 overflow-hidden">
+              <div className="items-start justify-center flex w-full h-full gap-5 flex-col">
+                <h1 className="text-7xl font-extrabold z-20">
+                  Thanks for listening!
+                </h1>
+                <span className="text-3xl">Any questions?</span>
+              </div>
+              <Universe />
+            </SwiperSlide>
           </Swiper>
         </ul>
       </div>

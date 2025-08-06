@@ -73,7 +73,6 @@ html {
 }
 
 
-
 @layer base {
   * {
     @apply border-border;
@@ -81,4 +80,9 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+
+}
+
+del {
+  text-decoration-thickness: 3px;
 }

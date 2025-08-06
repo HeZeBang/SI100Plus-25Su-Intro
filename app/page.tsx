@@ -1,6 +1,6 @@
 "use client";
 
-import Slides from "../components/template/GeekPieTemplate";
+import Slides from "../components/template/SI100Template";
 import slides from "./_data/demo";
 
 export default function Home() {
