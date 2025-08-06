@@ -14,7 +14,7 @@ const slides = [
     content: (<>
       <MDBlock>{`
 - SI 100+ 是一门面向**任何专业学生**的课程，旨在帮助大家度过传说中的 SI 100 课程。
-- 这一门课是学长自发开设的，没有报酬！！没有费用！！至今已经开设了 4 年（吧）。元老成员已经毕业😢
+- 这一门课是学长自发开设的，没有报酬！！没有费用！！至今已经开设了 2 年。元老成员已经毕业😢（成为荣誉元老返场）
 - SI 100+ 由四个部分组成
   - **信息科学入门**：让没有计算机基础的同学也能轻松入门
   - **Python 基础**：学习 Python 编程语言的基础知识
@@ -65,6 +65,16 @@ const slides = [
           <MDBlock>{`
 ## 曹宇涵 / 蛙 / teafrogsf
 
+- SI 100+ 创办人，SI 100+ 2023/2024 Leader
+- ~~用来营销的~~background：
+  - Incoming Visiting Scholar/Research Fellow@UC Berkeley（~~意思是因为申请不到PhD只能去访问了~~）
+  - Intern@上海期智研究院，working with Prof. Tianxing He（Prof at 清华大学交叉信息研究院）
+  - Former Intern@微软亚洲研究院，北京大学
+- 研究方向：语言模型、算法博弈论（及与人文社科的交叉）
+- 当了七个学期信导助教，已退休，有丰富的被骂经验
+- 前前前前任音乐社社长，鼠标编曲混音战士
+- 主页是https://teafrogsf.github.io（欢迎来听我写的歌！）
+- 微信：teafrogsf，QQ：861940148
 
 `}</MDBlock>
         </div>
@@ -362,6 +372,15 @@ const slides = [
         <MDBlock>{`
 ## 刘林嘉
 
+- CS AI方向
+- 兴趣：排版（方正书版，Typst，LaTeX），做PPT，科技数码，~~引诱(Arc)~~，CTF，滚动的天空，~~Jupyter Notebook~~
+- 分享一些电脑/CS常识，避坑等
+- B站：CNDY-RS（补药盒我😭）
+- [GitHub Pages: https://cndy1390.github.io/](https://cndy1390.github.io/)
+- QQ：CNDY2827
+- 因为平时一般拍别人不拍自己，所以只能临时自拍一张
+- 8月13号后在加州伯克利，在线时间可能发生变化（也可能熬通了导致不变），不定期水群回消息
+- **SI100+一定要设闹钟按时听！🙏**
 `}</MDBlock>
       </div>
     </>)
@@ -424,6 +443,10 @@ const slides = [
         />
         <MDBlock>{`
 ## 赵思哲 / Prince213
+
+- GeekPie 社团副社长、 LUG 负责人、GeekPie 镜像站 SRE
+- Nixpkgs Maintainer、NixOS CN 社区知名成员
+- 丰富的开源贡献经验和实习经验，即将去瑞士参加 NixCon 2025
 
 `}</MDBlock>
       </div>
@@ -541,7 +564,8 @@ const slides = [
 Ref: teafrogsf
 
 - 这门课对我们而言是一个尝试，我们希望能够通过这门课程的努力，逐步将教学的经验和成果应用到正式的课程中。
-- 大家也不用担心学完之后会不会忘掉，忘掉一门学过课程的知识细节是很正常的，但只要有了记忆和经验，在未来你们遇到问题的
+- 大家也不用担心学完之后会不会忘掉，忘掉一门学过课程的知识细节是很正常的，但只要有了记忆和经验，在未来你们遇到问题的时候还能回过头来翻一翻，那就足够了。
+- 最后祝大家暑假愉快！希望 SI100+ 能够成为你们暑假中上的最开心的一门课！
       `}</MDBlock>)
   }
 ] as SlideT[];
